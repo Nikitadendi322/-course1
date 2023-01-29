@@ -51,8 +51,9 @@ public class Easy {
         return result;
     }
 
-    public static float calculateAverageSalary() {return calculateTotalSalary()/ Employee.getCounter();}
-
+    public static float calculateAverageSalary() {
+        return calculateTotalSalary() / Employee.getCounter();
+    }
 
 
     public static void printFullNames() {
@@ -80,7 +81,8 @@ public class Easy {
         printFullNames();
         printEmployees();
         System.out.println("avg =" + calculateAverageSalary());
-
+        System.out.println("maxSalaryEmployee:" + findEmployeeWithMaxSalary());
+        System.out.println("minSalaryEmployee:" + findEmployeeWithMinSalary());
 
     }
 }

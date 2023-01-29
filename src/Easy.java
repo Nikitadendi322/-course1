@@ -28,15 +28,15 @@ public class Easy {
 
 
     public static Employee findEmployeeWithMinSalary() {
-        Employee result = employees[0];
-        int minSalary = result.getSalary();
+        Employee resultEmployee = employees[0];
+        int minSalary = resultEmployee.getSalary();
         for (Employee employee : employees) {
             if (employee != null && employee.getSalary() < minSalary) {
                 minSalary = employee.getSalary();
-                result = employee;
+                resultEmployee = employee;
             }
         }
-        return result;
+        return resultEmployee;
     }
 
     public static Employee findEmployeeWithMaxSalary() {
@@ -51,9 +51,9 @@ public class Easy {
         return result;
     }
 
-    public static float calculateAverageSalary() {
-        return calculateAverageSalary() / Employee.getCounter();
-    }
+    public static float calculateAverageSalary() {return calculateTotalSalary()/ Employee.getCounter();}
+
+
 
     public static void printFullNames() {
         for (Employee employee : employees) {
@@ -66,7 +66,7 @@ public class Easy {
     public static void main(String[] args) {
         employees = new Employee[]{
                 null,
-                new Employee("Павлов Никита Алексеевич", 17000, 1),
+
                 new Employee("Cахаров Дмитрий Адреевич", 17000, 2),
                 new Employee("Бертцун Артем", 17000, 2),
                 new Employee("Павлова Елена", 17000, 2),

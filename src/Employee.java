@@ -66,7 +66,7 @@ public class Employee {
         return Objects.hash(name, id, salary, department);
     }
 
-    public int validateDeaprtment(int department){
-        return department < 1 || department > 5? 1: department;
+    private int validateDeaprtment(int department) {
+        return department < 1 || department > 5 ? 1 : department;
     }
 }
